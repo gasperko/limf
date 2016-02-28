@@ -26,6 +26,9 @@ def main():
                         help='Decrypts files from links with encrypted files')
     parser.add_argument('-j', dest="local_list",
                         default=False, help='Path to a local list file')
+    parser.add_argument('-s', dest="show_list", action='store_const',
+                        const=True, default=False,
+                        help='Show the host list (will not upload your files when called)')
 
     args = parser.parse_args()
     try:

@@ -19,8 +19,8 @@ def retrieve_local_host_list(local_list_path):
         print("The host list is not valid. Please check it.")
     exit()
 
-def generate_host_string(clone_list):
-    host_string = 'Select hosting: '
+def generate_host_string(clone_list, host_string=None):
+    host_string = host_string or 'Select hosting: '
     for i in range(0, len(clone_list)):
         if i == len(clone_list)-1:
             host_string += '{} - {}'.format(str(i), clone_list[i][2])
