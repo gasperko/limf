@@ -20,19 +20,22 @@ def parse_arguments(args, clone_list):
         for i in args.files:
             print(decrypt_files(i))
             exit()
-    for i in args.files:
-        if host_number is None or args.host != host_number:
-            host_number = random.randrange(0, len(clone_list))
-        while True:
-            try:
-                if args.encrypt:
-                    print(encrypt_files(clone_list[host_number], args.only_link, i))
-                else:
-                    print(upload_files(open(i, 'rb'), \
-                          clone_list[host_number], args.only_link, i))
-            except IndexError:
-                #print('Selected server (' + clone_list[host_number][0] + ') is offline.')
-                #print('Trying other host.')
+    if args.files:
+        for i in args.files:
+            if host_number is None or args.host != host_number:
                 host_number = random.randrange(0, len(clone_list))
-                continue
-            break
+            while True:
+                try:
+                    if args.encrypt:
+                        print(encrypt_files(clone_list[host_number], args.only_link, i))
+                    else:
+                        print(upload_files(open(i, 'rb'), \
+                              clone_list[host_number], args.only_link, i))
+                except IndexError:
+                    #print('Selected server (' + clone_list[host_number][0] + ') is offline.')
+                    #print('Trying other host.')
+                    host_number = random.randrange(0, len(clone_list))
+                    continue
+                break
+    else:
+        print("limf: try 'limf -h' for more information")

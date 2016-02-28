@@ -10,9 +10,9 @@ def main():
     """Creates arguments and parses user input"""
     parser = argparse.ArgumentParser(
         description='Uploads selected file to working pomf.se clone')
-    parser.add_argument('files', metavar='file', nargs='+', type=str,
+    parser.add_argument('files', metavar='file', nargs='*', type=str,
                         help='Files to upload')
-    parser.add_argument('-c', metavar='host number', type=int,
+    parser.add_argument('-c', metavar='host_number', type=int,
                         dest='host', default=None,
                         help='The number (0-n) of the selected host (default is random)')
     parser.add_argument('-l', dest='only_link', action='store_const',
