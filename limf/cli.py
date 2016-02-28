@@ -8,16 +8,13 @@ from .hostlist import retrieve_local_host_list
 
 def main():
     """Creates arguments and parses user input"""
-    clone_list = retrieve_local_host_list('host_list.json')  # retrieve_online_host_list()
-    host_string = generate_host_string(clone_list)
-
     parser = argparse.ArgumentParser(
         description='Uploads selected file to working pomf.se clone')
     parser.add_argument('files', metavar='file', nargs='+', type=str,
                         help='Files to upload')
     parser.add_argument('-c', metavar='host number', type=int,
                         dest='host', default=None,
-                        help=host_string)
+                        help='The number (0-n) of the selected host (default is random)')
     parser.add_argument('-l', dest='only_link', action='store_const',
                         const=True, default=False,
                         help='Changes output to just link to the file')
@@ -27,20 +24,20 @@ def main():
     parser.add_argument('-d', dest='decrypt', action='store_const',
                         const=True, default=False,
                         help='Decrypts files from links with encrypted files')
-    parser.add_argument('-j', dest="use_local_list",
-                        default=False,
-                        help='choose to use a local list')
+    parser.add_argument('-j', dest="local_list",
+                        default=False, help='Path to a local list file')
 
     args = parser.parse_args()
-    if args.host and args.host not in range(0, len(clone_list)):
-        print('Please input valid host number')
-        exit()
     try:
-        if args.use_local_list:
-            print("using local list @ {0}".format(args.use_local_list))
-            clone_list = retrieve_local_host_list(args.use_local_list)
+        if args.local_list:
+            clone_list = retrieve_local_host_list(args.local_list)
         else:
             clone_list = retrieve_online_host_list()
+
+        if args.host and not(0 <= args.host < len(clone_list)):
+            print(generate_host_string(clone_list))
+            exit()
+
         parse_arguments(args, clone_list)
     except FileNotFoundError:
         print('Plese enter valid file.')
