@@ -1,31 +1,20 @@
 #!/bin/env python
 """A command line tool for uploding stuff to pomf.se clones"""
 import argparse
-import urllib
-import json
 from .parse_arguments import parse_arguments
+from .hostlist import retrieve_online_host_list
+from .hostlist import generate_host_string
+from .hostlist import retrieve_local_host_list
+
 def main():
     """Creates arguments and parses user input"""
-    try:
-        url = "https://raw.githubusercontent.com/lich/limf/master/host_list.json"
-        clone_list = json.loads(urllib.request.urlopen(url).read().decode('utf-8'))
-    except urllib.error.URLError:
-        print("Check your internet connection.")
-        exit()
-    #Dynamically generate host list from json hosted on github
-    host_string = 'Select hosting: '
-    for i in range(0, len(clone_list)):
-        if i == len(clone_list)-1:
-            host_string += '{} - {}'.format(str(i), clone_list[i][2])
-        else:
-            host_string += '{} - {}, '.format(str(i), clone_list[i][2])
     parser = argparse.ArgumentParser(
         description='Uploads selected file to working pomf.se clone')
     parser.add_argument('files', metavar='file', nargs='+', type=str,
                         help='Files to upload')
     parser.add_argument('-c', metavar='host number', type=int,
                         dest='host', default=None,
-                        help=host_string)
+                        help='The number (0-n) of the selected host (default is random)')
     parser.add_argument('-l', dest='only_link', action='store_const',
                         const=True, default=False,
                         help='Changes output to just link to the file')
@@ -35,11 +24,23 @@ def main():
     parser.add_argument('-d', dest='decrypt', action='store_const',
                         const=True, default=False,
                         help='Decrypts files from links with encrypted files')
+    parser.add_argument('-j', dest="local_list",
+                        default=False, help='Path to a local list file')
+    parser.add_argument('-s', dest="show_list", action='store_const',
+                        const=True, default=False,
+                        help='Show the host list (will not upload your files when called)')
+
     args = parser.parse_args()
-    if args.host and args.host not in range(0, len(clone_list)):
-        print('Please input valid host number')
-        exit()
     try:
+        if args.local_list:
+            clone_list = retrieve_local_host_list(args.local_list)
+        else:
+            clone_list = retrieve_online_host_list()
+
+        if args.host and not(0 <= args.host < len(clone_list)):
+            print(generate_host_string(clone_list))
+            exit()
+
         parse_arguments(args, clone_list)
     except FileNotFoundError:
         print('Plese enter valid file.')

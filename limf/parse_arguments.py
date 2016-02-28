@@ -4,11 +4,18 @@ import random
 from .decrypter import decrypt_files
 from .encrypter import encrypt_files
 from .uploader import upload_files
+from .hostlist import generate_host_string
+
 def parse_arguments(args, clone_list):
     """
     Makes parsing arguments a function.
     """
     host_number = args.host
+
+    if args.show_list:
+        print(generate_host_string(clone_list, "Available hosts: "))
+        exit()
+
     if args.decrypt:
         for i in args.files:
             print(decrypt_files(i))
