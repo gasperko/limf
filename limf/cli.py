@@ -1,24 +1,16 @@
 #!/bin/env python
 """A command line tool for uploding stuff to pomf.se clones"""
 import argparse
-import urllib
-import json
 from .parse_arguments import parse_arguments
+from .hostlist import retrieve_online_host_list
+from .hostlist import generate_host_string
+from .hostlist import retrieve_local_host_list
+
 def main():
     """Creates arguments and parses user input"""
-    try:
-        url = "https://raw.githubusercontent.com/lich/limf/master/host_list.json"
-        clone_list = json.loads(urllib.request.urlopen(url).read().decode('utf-8'))
-    except urllib.error.URLError:
-        print("Check your internet connection.")
-        exit()
-    #Dynamically generate host list from json hosted on github
-    host_string = 'Select hosting: '
-    for i in range(0, len(clone_list)):
-        if i == len(clone_list)-1:
-            host_string += '{} - {}'.format(str(i), clone_list[i][2])
-        else:
-            host_string += '{} - {}, '.format(str(i), clone_list[i][2])
+    clone_list = retrieve_local_host_list('host_list.json')  # retrieve_online_host_list()
+    host_string = generate_host_string(clone_list)
+
     parser = argparse.ArgumentParser(
         description='Uploads selected file to working pomf.se clone')
     parser.add_argument('files', metavar='file', nargs='+', type=str,
@@ -35,11 +27,20 @@ def main():
     parser.add_argument('-d', dest='decrypt', action='store_const',
                         const=True, default=False,
                         help='Decrypts files from links with encrypted files')
+    parser.add_argument('-j', dest="use_local_list",
+                        default=False,
+                        help='choose to use a local list')
+
     args = parser.parse_args()
     if args.host and args.host not in range(0, len(clone_list)):
         print('Please input valid host number')
         exit()
     try:
+        if args.use_local_list:
+            print("using local list @ {0}".format(args.use_local_list))
+            clone_list = retrieve_local_host_list(args.use_local_list)
+        else:
+            clone_list = retrieve_online_host_list()
         parse_arguments(args, clone_list)
     except FileNotFoundError:
         print('Plese enter valid file.')
