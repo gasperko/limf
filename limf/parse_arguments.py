@@ -36,6 +36,9 @@ def parse_arguments(args, clone_list):
                     #print('Trying other host.')
                     host_number = random.randrange(0, len(clone_list))
                     continue
+                except IsADirectoryError:
+                    print('limf does not support directory upload, if you want to upload ' \
+                          'every file in directory use limf {}/*.'.format(i.replace('/', '')))
                 break
     else:
         print("limf: try 'limf -h' for more information")
