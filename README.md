@@ -17,6 +17,8 @@ Useful when used as bind to key.
 * scrot - for doing screenshots (limfshot.sh)
 * xclip - for putting link into clipboard (limfshot.sh)
 * gpg - for encryption and decrytion  
-  
+
+####Entry syntax 
+`['$clone_url", "$clone_upload_url", "$clone_list_name", $max_clone_filesize]`  
 #####I am clone owner and my clone is not in host_list.json, what should I do?
 Either email me (lich@opmbx.org) or create pull request. 

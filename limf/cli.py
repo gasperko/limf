@@ -29,7 +29,9 @@ def main():
     parser.add_argument('-s', dest="show_list", action='store_const',
                         const=True, default=False,
                         help='Show the host list (will not upload your files when called)')
-
+    parser.add_argument('-m', dest='limit_size', action='store_const',
+                        const=True, default=False,
+                        help='Do not upload file if it exceeds the certain host limit')
     args = parser.parse_args()
     try:
         if args.local_list:
