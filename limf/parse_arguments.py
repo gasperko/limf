@@ -22,11 +22,9 @@ def parse_arguments(args, clone_list):
     Makes parsing arguments a function.
     """
     host_number = args.host
-
     if args.show_list:
         print(generate_host_string(clone_list, "Available hosts: "))
         exit()
-
     if args.decrypt:
         for i in args.files:
             print(decrypt_files(i))
@@ -39,9 +37,18 @@ def parse_arguments(args, clone_list):
                         host_number = None
                 for n, host in enumerate(clone_list):
                     if not check_max_filesize(i, host[3]):
-                        clone_list.pop(n)
+                        clone_list[n] = None
                 if not clone_list:
                     print('None of the clones is able to support so big file.')
+            if args.no_cloudflare:
+                if args.host == host_number and host_number is not None and not clone_list[host_number][4]:
+                    print("This host uses Cloudflare, please choose different host.")
+                    exit(1)
+                else:
+                    for n, host in enumerate(clone_list):
+                        if not host[4]:
+                            clone_list[n] = None
+            clone_list = list(filter(None, clone_list))
             if host_number is None or args.host != host_number:
                 host_number = random.randrange(0, len(clone_list))
             while True:

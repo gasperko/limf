@@ -32,13 +32,18 @@ def main():
     parser.add_argument('-m', dest='limit_size', action='store_const',
                         const=True, default=False,
                         help='Do not upload file if it exceeds the certain host limit')
+    parser.add_argument('-nc', dest='no_cloudflare', action='store_const',
+                        const=True, default=False,
+                        help='Do not use hosts which use Cloudflare.')
     args = parser.parse_args()
     try:
         if args.local_list:
             clone_list = retrieve_local_host_list(args.local_list)
         else:
             clone_list = retrieve_online_host_list()
-
+        if len(min(clone_list, key=len)) < 5 and (args.limit_size or args.no_cloudflare):
+            print("For newer options, please update your host_list.")
+            exit()
         if args.host and not(0 <= args.host < len(clone_list)):
             print(generate_host_string(clone_list))
             exit()
