@@ -13,5 +13,6 @@
         ["https://maxfile.ro/static/", "https://d2.maxfile.ro/", "maxfile.ro", 52428800],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600],
         ["https://pomf.is/", "https://u.pomf.is/", "pomf.is", 104857600],
+        ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200],
         ["https://tpb.lc/", "https://a.tbp.lc/", "tpb.lc", 2147483648]
 ]
