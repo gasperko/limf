@@ -1,7 +1,7 @@
 [
         ["http://1339.cf/", "http://b.1339.cf/", "1339.cf", 104857600, 1],
         ["http://comfy.moe/", "http://comfy.moe/", "comfy.moe", 2147483648, 1],
-        ["http://cuntflaps.me/", "http://a.cuntflaps.me/", "cuntflaps.me", 209715200, 0],
+        ["https://cuntflaps.me/", "https://a.cuntflaps.me/", "cuntflaps.me", 209715200, 0],
         ["http://files.plebeianparty.com/", "http://a.plebeianparty.com/", "plebianparty.com", 52428800, 1],
         ["http://g.zxq.co/", "http://y.zxq.co/", "zxq.co", 52428800, 1],
         ["http://glop.me/", "http://gateway.glop.me/ipfs/", "glop.me (IPFS!)", 10485760, 0],
