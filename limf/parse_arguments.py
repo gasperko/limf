@@ -21,6 +21,7 @@ def parse_arguments(args, clone_list):
     """
     Makes parsing arguments a function.
     """
+    returned_string=""
     host_number = args.host
     if args.show_list:
         print(generate_host_string(clone_list, "Available hosts: "))
@@ -54,10 +55,11 @@ def parse_arguments(args, clone_list):
             while True:
                 try:
                     if args.encrypt:
-                        print(encrypt_files(clone_list[host_number], args.only_link, i))
+                        returned_string = encrypt_files(clone_list[host_number], args.only_link, i)
                     else:
-                        print(upload_files(open(i, 'rb'), \
-                              clone_list[host_number], args.only_link, i))
+                        returned_string = upload_files(open(i, 'rb'), \
+                              clone_list[host_number], args.only_link, i)
+                    print(returned_string)
                 except IndexError:
                     #print('Selected server (' + clone_list[host_number][0] + ') is offline.')
                     #print('Trying other host.')
@@ -66,6 +68,11 @@ def parse_arguments(args, clone_list):
                 except IsADirectoryError:
                     print('limf does not support directory upload, if you want to upload ' \
                           'every file in directory use limf {}/*.'.format(i.replace('/', '')))
+                
+                if args.log:
+                    with open(os.path.expanduser(args.logfile), "a+") as logfile:
+                        logfile.write(returned_string)
+                        logfile.write("\n")
                 break
     else:
         print("limf: try 'limf -h' for more information")

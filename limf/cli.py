@@ -35,6 +35,12 @@ def main():
     parser.add_argument('-nc', dest='no_cloudflare', action='store_const',
                         const=True, default=False,
                         help='Do not use hosts which use Cloudflare.')
+    parser.add_argument('--log-file', metavar="LOGFILE", dest="logfile",
+                        default="~/limf.log",
+                        help="The location of log file")
+    parser.add_argument('--log', dest='log', action="store_const",
+                        const=True, default=False,
+                        help="Enables the logging feature, default logfile is ~/limf.log")
     args = parser.parse_args()
     try:
         if args.local_list:
