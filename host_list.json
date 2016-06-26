@@ -8,7 +8,7 @@
         ["http://up.che.moe/", "http://cdn.che.moe/", "up.che.moe", 52428800, 1],
         ["https://cocaine.ninja/", "https://a.cocaine.ninja/",  "cocaine.ninja", 104857600, 1],
         ["https://kyaa.sg/", "https://r.kyaa.sg/", "kyaa.sg", 104857600, 0],
-        ["https://lainfile.pw/", "https:/lainfile.pw/", "Lainfile", 8388608, 0],
+        ["https://lainfile.pw/", "https:/lainfile.pw/", "lainfile.pw", 8388608, 0],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600, 0],
         ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 0],
         ["https://pomf.is/", "https://u.pomf.is/", "pomf.is", 104857600, 0],
