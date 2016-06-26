@@ -59,7 +59,10 @@ def parse_arguments(args, clone_list):
                     else:
                         returned_string = upload_files(open(i, 'rb'), \
                               clone_list[host_number], args.only_link, i)
-                    print(returned_string)
+                    if args.only_link:
+                        print(returned_string[0])
+                    else:
+                        print(returned_string)
                 except IndexError:
                     #print('Selected server (' + clone_list[host_number][0] + ') is offline.')
                     #print('Trying other host.')
@@ -71,7 +74,10 @@ def parse_arguments(args, clone_list):
                 
                 if args.log:
                     with open(os.path.expanduser(args.logfile), "a+") as logfile:
-                        logfile.write(returned_string)
+                        if args.only_link:
+                            logfile.write(returned_string[1])
+                        else:
+                            logfile.write(returned_string)
                         logfile.write("\n")
                 break
     else:

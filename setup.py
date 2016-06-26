@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='limf',
-    version='0.6.0',
+    version='0.6.1',
     url='http://github.com/lich/limf',
     license='MIT',
     author='Mikolaj \'lich\' Halber',
