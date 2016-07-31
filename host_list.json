@@ -12,7 +12,7 @@
         ["https://pomf.is/", "https://u.pomf.is/", "pomf.is", 104857600, 0],
         ["https://sugoi.vidyagam.es/", "https://sugoi.vidyagam.es/qt/", "sugoi.vidyagam.es", 104857600, 0],
         ["https://desu.sh/", "https://a.desu.sh/", "desu.sh", 2147483648, 1],
-        ["https://u.aww.moe/", "https://u.aww.moe/", "aww.moe", 2147483648, 1],
+        ["https://aww.moe/", "https://aww.moe/", "aww.moe", 2147483648, 1],
         ["https://pomf.lesderid.net/", "https://pomf.lesderid.net/f/", "pomf.lesderid.net", 52428800, 1],
         ["https://pomf.amatsuka.com/", "https://pomf.amatsuka.com/a/", "pomf.amatsuka.com", 524288000, 1],
         ["https://p.fuwafuwa.moe/", "https://p.fuwafuwa.moe/", "p.fuwafuwa.moe", 52428800, 1]
