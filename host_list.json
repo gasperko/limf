@@ -1,5 +1,4 @@
 [
-        ["http://1339.cf/", "http://b.1339.cf/", "1339.cf", 104857600, 1],
         ["https://comfy.moe/", "https://comfy.moe/", "comfy.moe", 2147483648, 1],
         ["https://cuntflaps.me/", "https://a.cuntflaps.me/", "cuntflaps.me", 209715200, 0],
         ["http://g.zxq.co/", "http://y.zxq.co/", "zxq.co", 52428800, 1],
@@ -13,6 +12,5 @@
         ["https://sugoi.vidyagam.es/", "https://sugoi.vidyagam.es/qt/", "sugoi.vidyagam.es", 104857600, 0],
         ["https://desu.sh/", "https://a.desu.sh/", "desu.sh", 2147483648, 1],
         ["https://aww.moe/", "https://aww.moe/", "aww.moe", 2147483648, 1],
-        ["https://pomf.amatsuka.com/", "https://pomf.amatsuka.com/a/", "pomf.amatsuka.com", 524288000, 1],
         ["https://p.fuwafuwa.moe/", "https://p.fuwafuwa.moe/", "p.fuwafuwa.moe", 268435456, 1]
 ]
