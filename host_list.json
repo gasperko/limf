@@ -11,7 +11,7 @@
         ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 0],
         ["https://pomf.is/", "https://u.pomf.is/", "pomf.is", 104857600, 0],
         ["https://sugoi.vidyagam.es/", "https://sugoi.vidyagam.es/qt/", "sugoi.vidyagam.es", 104857600, 0],
-        ["https://desu.sh/", "https://a.desu.sh/", "desu.sh", 2147483648, 1],
+        ["https://doko.moe/", "https://a.doko.moe/", "doko.moe", 2147483648, 1],
         ["https://aww.moe/", "https://aww.moe/", "aww.moe", 2147483648, 1],
         ["https://p.fuwafuwa.moe/", "https://p.fuwafuwa.moe/", "p.fuwafuwa.moe", 268435456, 1]
 ]
