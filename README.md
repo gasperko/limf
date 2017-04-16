@@ -18,7 +18,8 @@ Useful when used as bind to key.
 * xclip - for putting link into clipboard (limfshot.sh)
 * gpg - for encryption and decrytion  
 
-####Entry syntax 
+#### Entry syntax 
 `['$clone_url", "$clone_upload_url", "$clone_list_name", $max_clone_filesize, $clone_does_not_use_cloudflare]`  
-#####I am clone owner and my clone is not in host_list.json, what should I do?
+
+##### I am clone owner and my clone is not in host_list.json, what should I do?
 Either email me (lich@opmbx.org) or create pull request. 
