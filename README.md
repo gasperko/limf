@@ -22,4 +22,4 @@ Useful when used as bind to key.
 `['$clone_url", "$clone_upload_url", "$clone_list_name", $max_clone_filesize, $clone_does_not_use_cloudflare]`  
 
 ##### I am clone owner and my clone is not in host_list.json, what should I do?
-Either email me (lich@opmbx.org) or create pull request. 
+Either email me (aptget@cock.lu) or create pull request. 
