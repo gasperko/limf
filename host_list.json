@@ -2,15 +2,11 @@
         ["https://comfy.moe/", "https://comfy.moe/", "comfy.moe", 2147483648, 1],
         ["https://safe.moe/api/", "https://a.safe.moe/", "safe.moe", 209715200, 0],
         ["http://glop.me/", "http://gateway.glop.me/ipfs/", "glop.me (IPFS!)", 10485760, 1],
-        ["http://up.che.moe/", "http://cdn.che.moe/", "up.che.moe", 52428800, 1],
-        ["https://cocaine.ninja/", "https://a.cocaine.ninja/",  "cocaine.ninja", 104857600, 1],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600, 0],
         ["https://nya.is/", "https://u.nya.is/", "nya.is", 104857600, 0],
-        ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 1],
         ["https://sugoi.vidyagam.es/", "https://qt.vidyagam.es/", "sugoi.vidyagam.es", 104857600, 1],
         ["https://pomfe.co/", "https://a.pomfe.co/", "pomfe.co", 104857600, 0],
         ["https://pomf.space/", "https://a.pomf.space/", "pomf.space", 268435456, 1],
         ["https://vidga.me/", "https://a.vidga.me/", "vidga.me", 104857600, 0],
         ["https://pomf.pyonpyon.moe/", "https://pomf.pyonpyon.moe/", "pomf.pyonpyon.moe", 52428800, 1],
-        ["https://p.fuwafuwa.moe/", "https://p.fuwafuwa.moe/", "p.fuwafuwa.moe", 268435456, 1]
 ]
