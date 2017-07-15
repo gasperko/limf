@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: limf master\n"
+"Report-Msgid-Bugs-To: acstubbins@opmbx.org\n"
+"POT-Creation-Date: 2017-05-07 14:14-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: cli.py:21
+msgid "Changes output to just link to the file"
+msgstr ""
+
+#: cli.py:27
+msgid "Decrypts files from links with encrypted files"
+msgstr ""
+
+#: cli.py:35
+msgid "Do not upload file if it exceeds the certain host limit"
+msgstr ""
+
+#: cli.py:38
+msgid "Do not use hosts which use Cloudflare."
+msgstr ""
+
+#: cli.py:44
+msgid "Enables the logging feature, default logfile is ~/limf.log"
+msgstr ""
+
+#: cli.py:24
+msgid "Encrypts then uploads the files."
+msgstr ""
+
+#: cli.py:15
+msgid "Files to upload"
+msgstr ""
+
+#: cli.py:52
+msgid "For newer options, please update your host_list."
+msgstr ""
+
+#: cli.py:29
+msgid "Path to a local list file"
+msgstr ""
+
+#: cli.py:60
+msgid "Plese enter valid file."
+msgstr ""
+
+#: cli.py:32
+msgid "Show the host list (will not upload your files when called)"
+msgstr ""
+
+#: cli.py:41
+msgid "The location of log file"
+msgstr ""
+
+#: cli.py:18
+msgid "The number (0-n) of the selected host (default is random)"
+msgstr ""
+
+#: cli.py:13
+msgid "Uploads selected file to working pomf.se clone"
+msgstr ""
