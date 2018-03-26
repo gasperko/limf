@@ -1,6 +1,5 @@
 [
         ["https://comfy.moe/", "https://comfy.moe/", "comfy.moe", 2147483648, 1],
-        ["https://safe.moe/api/", "https://a.safe.moe/", "safe.moe", 209715200, 0],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600, 0],
         ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 1],
         ["https://doko.moe/", "https://a.doko.moe/", "doko.moe", 2147483648, 0],
@@ -8,5 +7,4 @@
         ["https://pomf.space/", "https://a.pomf.space/", "pomf.space", 268435456, 1],
         ["https://vidga.me/", "https://a.vidga.me/", "vidga.me", 104857600, 0],
         ["https://pomf.pyonpyon.moe/", "https://pomf.pyonpyon.moe/", "pomf.pyonpyon.moe", 52428800, 1],
-        ["https://up.asis.io/", "https://dl.asis.io/", "up.asis.io", 52428800, 1]
 ]
