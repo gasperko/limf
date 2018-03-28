@@ -1,10 +1,10 @@
 [
-        ["https://comfy.moe/", "https://comfy.moe/", "comfy.moe", 2147483648, 1],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600, 0],
         ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 1],
         ["https://doko.moe/", "https://a.doko.moe/", "doko.moe", 2147483648, 0],
         ["https://pomfe.co/", "https://a.pomfe.co/", "pomfe.co", 104857600, 0],
         ["https://pomf.space/", "https://a.pomf.space/", "pomf.space", 268435456, 1],
         ["https://vidga.me/", "https://a.vidga.me/", "vidga.me", 104857600, 0],
+        ["https://coka.la/", "https://a.coka.la", "coka.la", 536870912, 1],
         ["https://pomf.pyonpyon.moe/", "https://pomf.pyonpyon.moe/", "pomf.pyonpyon.moe", 52428800, 1]
 ]
