@@ -1,4 +1,5 @@
 [
+        ["https://comfy.moe/", "https://comfy.moe/", "comfy.moe", 2147483648, 1],
         ["https://mixtape.moe/", "https://my.mixtape.moe/", "mixtape.moe", 104857600, 0],
         ["https://pomf.cat/", "https://a.pomf.cat/", "pomf.cat", 78643200, 1],
         ["https://doko.moe/", "https://a.doko.moe/", "doko.moe", 2147483648, 0],
